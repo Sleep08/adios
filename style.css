@@ -1,0 +1,80 @@
+body{
+    background-color: rgb(251, 225, 176);
+    text-align: center;
+}
+
+h1{
+    font-size: 6em;
+    color: rgb(218, 138, 73);
+    text-shadow: 0.1em 0.1em 0.2em white;
+    font-family: 'Righteous', cursive;}
+
+h2{
+    font-size: 3em;
+    color: rgb(218, 138, 73);
+    text-shadow: 0.1em 0.1em 0.2em white;
+    font-family: 'Righteous', cursive;
+    margin-top: -50px;
+}
+
+#joueurs{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    background-color: rgb(243, 246, 189);
+    margin: auto;
+    text-align: center;
+    width: 350px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 10%;
+    margin-top: 10px;
+}
+
+.btnGame{
+    width: auto;
+    color: rgb(218, 138, 73);
+    background-color: rgb(243, 246, 189);
+    text-shadow: 0.1em 0.1em 0.2em white;
+    margin-top: 25px;
+    font-size: 2em;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-family: 'Righteous', cursive;
+}
+
+.joueurContain {
+    text-align: center;
+    margin: auto;
+    display: flex;
+    width: 500px;
+    height: 80px;
+}
+.joueurContain p {
+    margin-top: -10px;
+    font-size: 5em;
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(218, 138, 73);
+    text-shadow: 0.1em 0.1em 0.2em white;
+}
+
+.joueurAjoute {
+    color: rgb(218, 138, 73);
+    text-shadow: 0.1em 0.1em 0.2em white;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.choice {
+    padding: 15px;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(218, 138, 73);
+    text-shadow: 0.1em 0.1em 0.2em white;
+}
