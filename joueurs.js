@@ -64,7 +64,7 @@ function lesProblemesFunction() {
     joueurContain.textContent="";
     let playerHasard = Math.floor(Math.random()*Players.length);
     let questionsProblemes = [
-        "Désigne deux personnes qui vont devoir dire ce qu'ils pensent de l'autre. Cinq gorgées en cas de refus.",
+        "Désigne deux personnes qui vont devoir dire ce qu'elles pensent de l'autre. Cinq gorgées en cas de refus.",
         "Donne trois gorgées à celui/celle qui t'attires le plus ici.",
         "Est-ce qu'il y a une personne décevante d'après toi autour de cette table ? Si oui tu désignes, elle boit deux gorgées, si non tu en bois quatre.",
         "Que penses-tu vraiment de " + Players[playerHasard],
@@ -73,6 +73,7 @@ function lesProblemesFunction() {
         "Appelle ton crush et dis-lui ce que tu ressens. 4 gorgées si refus.",
         "Que penses-tu du partenaire de " + Players[playerHasard],
         "Va lécher le cou de " + Players[playerHasard] + " 5 gorgées en cas de refus",
+        "offre un strip-tease à " + Players[playerHasard] + " quatre gorgées si refus",
     ]
     let questionsHasardProblemes = Math.floor(Math.random()*questionsProblemes.length);
     document.getElementById("question").textContent = questionsProblemes[questionsHasardProblemes];
@@ -99,7 +100,6 @@ function veriteFunction() {
         "Donne un top 5 de tes meilleurs amis",
         "Que penses-tu vraiment de " + Players[playerHasard],
         "Pose une question à quelqu'un ici, elle sera obligée d'y répondre. 4 gorgées si refus.",
-        "Va embrasser une personne autour de cette table. 4 gorgées si refus.",
         "Raconte une anecdote gênante à ton sujet",
         "Quelle la valeur indispensable à tes yeux ?",        
         "Raconte un fantasme que tu as déjà réalisé.",        
