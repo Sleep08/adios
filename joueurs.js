@@ -74,6 +74,9 @@ function lesProblemesFunction() {
         "Que penses-tu du partenaire de " + Players[playerHasard],
         "Va lécher le cou de " + Players[playerHasard] + " 5 gorgées en cas de refus",
         "offre un strip-tease à " + Players[playerHasard] + " quatre gorgées si refus",
+        "Va embrasser deux personnes, puis donne trois gorgées à celle que tu as préféré.",
+        "Réalise une danse sexy sur " + Players[playerHasard],
+        ""
     ]
     let questionsHasardProblemes = Math.floor(Math.random()*questionsProblemes.length);
     document.getElementById("question").textContent = questionsProblemes[questionsHasardProblemes];
@@ -106,10 +109,34 @@ function veriteFunction() {
         "Si tu devais ne garder qu'une personne sur cette terre qui serait-ce ?",        
         "Serais-tu capable de te sacrifier pour sauver la vie de quelqu'un ici ?",        
         "Penses-tu être quelqu'un de bien ? Si oui, donne quelqu'un que tu juges être une meilleure personne.",        
-        "Cite une personne plus importante que" + Players[playerHasard] + " ici présente.",        
+        "Cite une personne plus importante que" + Players[playerHasard] + " ici présente.",
+        "Qui aimes-tu le moins ici ?"        
     ]
     let questionsHasardVerite = Math.floor(Math.random()*questionVerite.length);
     document.getElementById("question").textContent = questionVerite[questionsHasardVerite];
+    let btnNext = document.createElement("button");
+    btnNext.setAttribute("class", "btnGame")
+    btnNext.textContent = "NEXT"
+    document.getElementById("button").appendChild(btnNext);
+    btnNext.addEventListener("click", function(){
+        let playerHasard = Math.floor(Math.random()*Players.length);
+        document.querySelector("h2").textContent = Players[playerHasard];
+        document.getElementById("question").textContent="";
+        btnNext.style.display="none";
+        apparitionChoix();
+        console.log(Players)
+    })
+}
+
+function jeuxFunction() {
+    joueurContain.textContent="";
+    let questionJeu = [
+        "Dans ma valise, le perdant bois trois gorgées",
+        "Il était une fois... Le perdant bois cinq gorgées.",
+        "Chifumi avec une personne de ton choix, le perdant bois deux gorgées."       
+    ]
+    let questionsHasardjeu = Math.floor(Math.random()*questionJeu.length);
+    document.getElementById("question").textContent = questionJeu[questionsHasardjeu];
     let btnNext = document.createElement("button");
     btnNext.setAttribute("class", "btnGame")
     btnNext.textContent = "NEXT"
@@ -137,10 +164,15 @@ function apparitionChoix() {
     lesProblemes.setAttribute("id", "lesProblemes");
     lesProblemes.setAttribute("class", "choice");
     lesProblemes.innerHTML = "LES PROBLEMES"
+    let jeux = document.createElement("div");
+    jeux.setAttribute("id", "jeux");
+    jeux.setAttribute("class", "choice");
+    jeux.innerHTML = "JEU"
     let containChoice = document.createElement("div");
     containChoice.appendChild(toutOuRien);
     containChoice.appendChild(verite);
     containChoice.appendChild(lesProblemes);
+    containChoice.appendChild(jeux);
     joueurContain.appendChild(containChoice);
     toutOuRien.addEventListener("click", function(){
         toutOuRienFunction();
@@ -150,6 +182,9 @@ function apparitionChoix() {
     });
     verite.addEventListener("click", function(){
         veriteFunction();
+    })
+    jeux.addEventListener("click", function(){
+        jeuxFunction();
     })
 }
 
